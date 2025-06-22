@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TrendingUp, TrendingDown, Activity, DollarSign, BarChart3, Globe } from 'lucide-react';
 
@@ -36,26 +35,26 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="max-w-7xl mx-auto space-y-6 px-4 py-6">
       <div className="mb-6">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Market Overview</h1>
-        <p className="text-gray-600">Live market data and insights</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Market Overview</h1>
+        <p className="text-gray-400">Live market data and insights</p>
       </div>
 
       {/* Market Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         {marketStats.map((stat, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+          <div key={index} className="bg-gray-800 rounded-xl border border-gray-700 p-6 hover:border-gray-600 transition-colors">
             <div className="flex items-center justify-between mb-4">
-              <div className={`p-2 rounded-lg ${stat.isPositive ? 'bg-green-50' : 'bg-red-50'}`}>
-                <stat.icon className={`w-5 h-5 ${stat.isPositive ? 'text-green-600' : 'text-red-600'}`} />
+              <div className={`p-2 rounded-lg ${stat.isPositive ? 'bg-green-900 bg-opacity-50' : 'bg-red-900 bg-opacity-50'}`}>
+                <stat.icon className={`w-5 h-5 ${stat.isPositive ? 'text-green-400' : 'text-red-400'}`} />
               </div>
-              <span className={`text-sm font-medium ${stat.isPositive ? 'text-groww-green' : 'text-groww-red'}`}>
+              <span className={`text-sm font-medium ${stat.isPositive ? 'text-green-400' : 'text-red-400'}`}>
                 {stat.change}
               </span>
             </div>
-            <h3 className="text-sm font-medium text-gray-500 mb-1">{stat.title}</h3>
-            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+            <h3 className="text-sm font-medium text-gray-400 mb-1">{stat.title}</h3>
+            <p className="text-2xl font-bold text-white">{stat.value}</p>
           </div>
         ))}
       </div>
@@ -63,34 +62,34 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         {/* Top Performing Stocks */}
         <div className="xl:col-span-2">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-gray-900">Top Performing Stocks</h3>
-              <button className="text-groww-primary hover:text-blue-700 text-sm font-medium">View All</button>
+              <h3 className="text-xl font-semibold text-white">Top Performing Stocks</h3>
+              <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">View All</button>
             </div>
             
             <div className="space-y-4">
               {topStocks.map((stock, index) => (
-                <div key={index} className="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                <div key={index} className="flex items-center justify-between p-4 hover:bg-gray-700 rounded-lg transition-colors cursor-pointer">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                         <span className="text-white font-semibold text-sm">{stock.symbol.substring(0, 2)}</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{stock.symbol}</h4>
-                        <p className="text-sm text-gray-500">Vol: {stock.volume}</p>
+                        <h4 className="font-semibold text-white">{stock.symbol}</h4>
+                        <p className="text-sm text-gray-400">Vol: {stock.volume}</p>
                       </div>
                     </div>
                   </div>
                   
                   <div className="text-right">
-                    <p className="font-semibold text-gray-900">{stock.price}</p>
+                    <p className="font-semibold text-white">{stock.price}</p>
                     <div className="flex items-center space-x-1">
-                      <span className={`text-sm font-medium ${stock.isPositive ? 'text-groww-green' : 'text-groww-red'}`}>
+                      <span className={`text-sm font-medium ${stock.isPositive ? 'text-green-400' : 'text-red-400'}`}>
                         {stock.change}
                       </span>
-                      <span className={`text-sm font-medium ${stock.isPositive ? 'text-groww-green' : 'text-groww-red'}`}>
+                      <span className={`text-sm font-medium ${stock.isPositive ? 'text-green-400' : 'text-red-400'}`}>
                         ({stock.changePercent})
                       </span>
                     </div>
@@ -104,17 +103,17 @@ const Dashboard = () => {
         {/* Sector Performance & Market News */}
         <div className="space-y-6">
           {/* Sector Performance */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Sector Performance</h3>
+          <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <h3 className="text-xl font-semibold text-white mb-6">Sector Performance</h3>
             
             <div className="space-y-4">
               {sectorPerformance.map((sector, index) => (
-                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-700 rounded-lg transition-colors">
                   <div>
-                    <p className="font-medium text-gray-900">{sector.sector}</p>
-                    <p className="text-sm text-gray-500">Adv/Dec: {sector.stocks}</p>
+                    <p className="font-medium text-white">{sector.sector}</p>
+                    <p className="text-sm text-gray-400">Adv/Dec: {sector.stocks}</p>
                   </div>
-                  <span className={`text-sm font-semibold ${sector.isPositive ? 'text-groww-green' : 'text-groww-red'}`}>
+                  <span className={`text-sm font-semibold ${sector.isPositive ? 'text-green-400' : 'text-red-400'}`}>
                     {sector.change}
                   </span>
                 </div>
@@ -123,14 +122,14 @@ const Dashboard = () => {
           </div>
 
           {/* Market News */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Market News</h3>
+          <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <h3 className="text-xl font-semibold text-white mb-6">Market News</h3>
             
             <div className="space-y-4">
               {marketNews.map((news, index) => (
-                <div key={index} className="p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
-                  <h4 className="font-medium text-gray-900 text-sm leading-tight mb-2">{news.title}</h4>
-                  <div className="flex justify-between text-xs text-gray-500">
+                <div key={index} className="p-3 hover:bg-gray-700 rounded-lg transition-colors cursor-pointer">
+                  <h4 className="font-medium text-white text-sm leading-tight mb-2">{news.title}</h4>
+                  <div className="flex justify-between text-xs text-gray-400">
                     <span>{news.source}</span>
                     <span>{news.time}</span>
                   </div>

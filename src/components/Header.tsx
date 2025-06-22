@@ -39,13 +39,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-4 sm:space-x-8">
           {/* Logo Container with fixed dimensions */}
-          <div className="flex-shrink-0 w-24 sm:w-32">
-            <Link to="/" className="block hover:opacity-90 transition-opacity">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Groww_app_logo.png" 
-                alt="Groww Logo"
-                className="h-auto w-full object-contain filter brightness-0 invert" // Makes logo white
-              />
+          <div className="flex items-center space-x-3">
+            <div className="flex-shrink-0 w-10">
+              <Link to="/" className="block hover:opacity-90 transition-opacity">
+                <img 
+                  src="logo.png" 
+                  alt="Groww Logo"
+                  className="h-auto w-full " // Makes logo white
+                />
+              </Link>
+            </div>
+            <Link to="/" className="hidden sm:block">
+              <span className="text-xl font-bold text-white">
+                GROWW
+              </span>
             </Link>
           </div>
           
