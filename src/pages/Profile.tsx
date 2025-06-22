@@ -7,14 +7,14 @@ const Profile = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const userProfile = {
-    name: "Rahul Sharma",
-    email: "rahul.sharma@email.com",
-    phone: "+91 98765 43210",
-    pan: "ABCDE1234F",
+    name: "Ajay Govind Pawar",
+    email: "mrajaypawar207@email.com",
+    phone: "+91 8605234701",
+    pan: "GCRPP7435P",
     avatarUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop&crop=face",
-    accountBalance: "₹2,54,000",
-    totalInvestment: "₹2,25,000",
-    totalReturns: "₹29,000",
+    accountBalance: "₹1,43,450",
+    totalInvestment: "₹1,12,000",
+    totalReturns: "31,450",
     returnsPercentage: "+12.89%",
     joinDate: "January 2023",
     kycStatus: "Verified",
