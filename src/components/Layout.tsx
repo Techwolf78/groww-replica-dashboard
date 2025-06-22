@@ -9,11 +9,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black">
       <Header />
       <div className="flex flex-col lg:flex-row h-[calc(100vh-64px)] sm:h-[calc(100vh-80px)]">
         <Sidebar />
-        <main className="flex-1 p-4 sm:p-6 bg-gray-50 overflow-y-auto">
+        <main className="flex-1 p-4 sm:p-6 bg-black overflow-y-auto">
           {children}
         </main>
       </div>
