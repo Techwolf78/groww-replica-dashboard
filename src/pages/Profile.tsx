@@ -11,7 +11,7 @@ const Profile = () => {
     phone: "+91 8605234701",
     pan: "GCRPP7435P",
     avatarUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop&crop=face",
-    accountBalance: "₹1,43,450",
+    accountBalance: "₹3,89,790",
     totalInvestment: "₹1,12,000",
     totalReturns: "31,450",
     returnsPercentage: "+12.89%",
